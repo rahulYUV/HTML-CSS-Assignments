@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - Code Editing. Redefined</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="#" class="logo">
+                    <img src="https://code.visualstudio.com/favicon.ico" alt="VS Code Logo" class="logo-img">
+                    <span class="logo-text">Visual Studio Code</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li><a href="#">MCP</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <span>Search Docs</span>
+                    <span class="shortcut">Ctrl+Shift+P</span>
+                </div>
+                <a href="#" class="download-btn">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="version-banner">
+        <a href="#">Version 1.108</a> is now available! Read about the new features and fixes from December.
+    </div>
+
+    <section class="hero">
+        <h1 class="hero-title">The open source<br>AI code editor</h1>
+        <div class="hero-cta">
+            <button class="download-main-btn">
+                <i class="fab fa-windows"></i>
+                Download for Windows
+            </button>
+            <p class="platform-links">
+                <a href="#">Web</a>, <a href="#">Insiders edition</a>, or <a href="#">other platforms</a>
+            </p>
+            <p class="license-text">
+                By using VS Code, you agree to its <a href="#">license</a> and <a href="#">privacy statement</a>.
+            </p>
+        </div>
+    </section>
+
+    <section class="editor-preview">
+        <div class="editor-window">
+            <div class="window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <div class="editor-content">
+                <div class="sidebar">
+                    <div class="sidebar-icons">
+                        <i class="fas fa-file"></i>
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-code-branch"></i>
+                        <i class="fas fa-puzzle-piece"></i>
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <div class="file-explorer">
+                        <div class="explorer-title">AGENT SESSIONS</div>
+                        <div class="explorer-item">LOCAL CHAT AGENT</div>
+                        <div class="explorer-subitem">Refactoring MailList component str...</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <div class="tabs">
+                        <div class="tab active">MailList.tsx</div>
+                        <div class="tab">MailListItem.tsx</div>
+                        <div class="tab">Extract MailListItem into standa...</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="line-num">1</span><span class="keyword">import</span> { For, createSignal, createMemo } <span class="keyword">from</span> <span class="string">"solid-js"</span>;</div>
+                        <div class="code-line"><span class="line-num">2</span><span class="keyword">import</span> { useNavigate, useParams } <span class="keyword">from</span> <span class="string">"@tanstack/solid-router"</span>;</div>
+                        <div class="code-line"><span class="line-num">3</span><span class="keyword">import</span> { getEmailsForMailbox } <span class="keyword">from</span> <span class="string">"~/data/emails"</span>;</div>
+                        <div class="code-line"><span class="line-num">4</span><span class="keyword">import</span> { <span class="component">MailListItem</span> } <span class="keyword">from</span> <span class="string">"~/components/MailListItem"</span>;</div>
+                        <div class="code-line"><span class="line-num">5</span></div>
+                        <div class="code-line"><span class="line-num">6</span><span class="keyword">export function</span> <span class="function">MailList</span>() {</div>
+                        <div class="code-line"><span class="line-num">7</span>  <span class="keyword">const</span> params = useParams({ strict: <span class="boolean">false</span> }) <span class="keyword">as</span> {</div>
+                        <div class="code-line"><span class="line-num">8</span>    mailbox?: <span class="type">string</span>;</div>
+                    </div>
+                </div>
+                <div class="chat-panel">
+                    <div class="chat-header">CHAT</div>
+                    <div class="chat-message">
+                        Please update the MailList component to abstract mail list items into their own standalone component
+                    </div>
+                    <div class="chat-agent">
+                        <i class="fas fa-robot"></i>
+                        <span>GitHub Copilot Cloud Agent</span>
+                    </div>
+                    <div class="chat-info">Delegate to cloud agent</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Any model for any team</h3>
+            <p>Choose from multiple out of the box models, or bring your own key to access models from your preferred model and hosting provider.</p>
+            <div class="model-selector">
+                <div class="selector-row">
+                    <span class="label">Agent</span>
+                    <span class="dropdown">GPT-5.2 <i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="model-list">
+                    <div class="model-item">Auto <span>Variable</span></div>
+                    <div class="model-item">GPT-5 mini <span>0x</span></div>
+                    <div class="model-item">Claude Opus 4.5 <span>3x</span></div>
+                    <div class="model-item">Claude Sonnet 4.5 <span>1x</span></div>
+                    <div class="model-item">Gemini 3 Pro (Preview) <span>1x</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-card">
+            <h3>An expert on your codebase</h3>
+            <p>Your codebase is indexed locally and remotely to understand what's relevant, enabling fast, context-aware interactions.</p>
+            <div class="search-demo">
+                <div class="search-bar-demo"></div>
+                <div class="search-result-demo"></div>
+            </div>
+        </div>
+        <div class="feature-card">
+            <h3>AI that works the way your team does</h3>
+            <p>Personalize interactions using custom agents, custom instructions, and reusable prompt files tailored to your workflows and tools.</p>
+            <div class="code-preview">
+                <div class="preview-tabs">
+                    <span class="preview-tab active">Compact.chatmode.md</span>
+                    <span class="preview-tab">AGENTS.md</span>
+                </div>
+                <div class="preview-code">
+                    <div class="preview-line">---</div>
+                    <div class="preview-line"><span class="yaml-key">description:</span> 'Generate compact respon...</div>
+                    <div class="preview-line"><span class="yaml-key">tools:</span> ['search', 'fetch', 'githubRep...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ai-banner">
+        <div class="ai-banner-content">
+            <h2>Use AI features in VS Code for free</h2>
+            <div class="ai-banner-right">
+                <p>No trial. No credit card required. Just your GitHub account.</p>
+                <button class="try-free-btn">Try free</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="agent-section">
+        <div class="agent-content">
+            <h2>Agent mode</h2>
+            <p>Tackle complex, multi-step tasks. Agent mode reads your codebase, suggests edits across files, runs terminal commands, and responds to compile or test failures — all in a loop until the job is done. Further refine agent mode to fit your team's workflows with VS Code extensions and Model Context Protocol (MCP) servers.</p>
+            <a href="#" class="learn-link">Build with agent mode</a>
+        </div>
+        <div class="agent-preview">
+            <div class="editor-window small">
+                <div class="window-controls">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="agent-editor-content">
+                    <div class="agent-tabs">
+                        <span>batch.go</span>
+                        <span>processor.go</span>
+                        <span>image...</span>
+                        <span class="copilot-tab"><i class="fas fa-robot"></i> Copilot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customizable-section">
+        <div class="customizable-content">
+            <h2>Fully customizable</h2>
+            <p>Customize your VS Code UI and layout so that it fits your coding style.</p>
+            <p><a href="#">Color themes</a> let you modify the colors in VS Code's user interface to suit your preferences and work environment.</p>
+            <p><a href="#">Settings Sync</a> enables you to share your user settings across your VS Code instances with the Settings Sync feature.</p>
+            <p><a href="#">Profiles</a> let you create sets of customizations and quickly switch between them or share them with others.</p>
+        </div>
+        <div class="theme-preview">
+            <div class="editor-window small">
+                <div class="window-controls">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="theme-selector">
+                    <input type="text" placeholder="Select Color Theme (Up/Down Arrow to Preview)" class="theme-input">
+                    <div class="theme-list">
+                        <div class="theme-item">+ Browse Additional Color Themes</div>
+                        <div class="theme-item">GitHub Light <span class="theme-tag">light themes</span></div>
+                        <div class="theme-item">Light Modern</div>
+                        <div class="theme-item">Abyss <span class="theme-tag dark">dark themes</span></div>
+                        <div class="theme-item active">GitHub Dark</div>
+                        <div class="theme-item">Dark High Contrast <span class="theme-tag contrast">high contrast themes</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-anywhere-section">
+        <div class="code-anywhere-content">
+            <h2>Code anywhere</h2>
+            <p>Code wherever you're most productive, whether you're connected to the cloud, a remote repository, or in the browser with VS Code for the Web (vscode.dev).</p>
+        </div>
+        <div class="browser-preview">
+            <div class="browser-window">
+                <div class="browser-header">
+                    <div class="browser-controls">
+                        <i class="fab fa-chrome"></i>
+                        <span class="browser-tab">my-app — button.ts</span>
+                        <span class="browser-tab active"><i class="fas fa-code"></i> vscode.dev</span>
+                    </div>
+                    <div class="browser-url">
+                        <i class="fas fa-lock"></i>
+                        https://vscode.dev
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-bluesky"></i></a>
+                <a href="#"><i class="fab fa-reddit"></i></a>
+                <a href="#"><i class="fas fa-microphone"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">License</a>
+            </div>
+        </div>
+        <div class="microsoft-logo">
+            <i class="fab fa-microsoft"></i>
+        </div>
+    </footer>
+</body>
+</html>
